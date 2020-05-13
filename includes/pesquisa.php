@@ -1,3 +1,4 @@
+<!--- Formulário de pesquisa --->
 <form action="index.php" method="post">
   <div class="form-group formulario">
     <input type="number" class="form-control" id="cep" name="cep" aria-describedby="emailHelp">
@@ -6,3 +7,4 @@
   
   <button type="submit" class="btn btn-dark btn-lg">Buscar</button>
 </form>
+<!--- Formulário de pesquisa --->

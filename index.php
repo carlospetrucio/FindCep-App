@@ -1,13 +1,4 @@
-<?php 
-$cepusuario = "";
-if (isset($_POST['cep'])){
-    $cepusuario = $_POST['cep'];
-}
-require_once "vendor/autoload.php";
-use carlospetrucio\findcep\Search;
-$busca = new Search;
-
-?>
+<?php  include('includes/cepusuario.php'); ?>
 
 <!doctype html>
 <html lang="pt-br">
@@ -36,22 +27,7 @@ $busca = new Search;
     </div>
     
     <div class="col-lg-12 col-sm-12 col-md-12 text-center dados-print">
-      <?php 
-
-if (empty($cepusuario)) {
-    echo "<small id='cepHelp' class='form-text text-light'>Informe um cep para pesquisa. (*apenas números)</small>";
-  }
-  else{
-              $vetor = $busca->getAddressFromZipcode($cepusuario);
-
-              foreach (array_keys($vetor) as $index => $key);
-              $array = array_keys($vetor);
-              for ($i = 0; $i <= 1; $i++) ;
-              echo "<h1> Seu Cep é : " . $vetor[$array[0]] . "</h1>";
-              echo "<h1> Endereço : " . $vetor[$array[1]] . " - " . $vetor[$array[2]] ."</h1>";
-        
-  }
-               ?>
+      <?php include ('includes/retorna-dados.php'); ?>
     </div>
     
   </div>
