@@ -1,0 +1,10 @@
+{
+    "name": "carlospetrucio/findcep-app",
+    "authors": [
+        {
+            "name": "CarlosPetrucio",
+            "email": "50377984+carlospetrucio@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
